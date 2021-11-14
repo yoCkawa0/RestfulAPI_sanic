@@ -18,6 +18,7 @@ RESTfulAPI_sanic
 │   ├── __pycache__
 │   │   └── models.cpython-38.pyc
 │   ├── main.py
+│   ├── migrate.py
 │   └── models.py
 └── tests
     ├── __init__.py
@@ -34,3 +35,33 @@ RESTfulAPI_sanic
 ```
 
 localhost:8081 に立てた PostgresSQL Server に接続するように指定している.
+
+## API output
+
+```json
+{
+  "todos": [
+    {
+      "id": 1,
+      "todo_title": "Nero!",
+      "user": {
+        "id": 1,
+        "name": "user1"
+      },
+      "tag": [
+        {
+          "id": 1,
+          "name": "Programming"
+        },
+        {
+          "id": 2,
+          "name": "homework"
+        }
+      ]
+    },
+                ・
+                ・
+                ・
+  ]
+}
+```
