@@ -26,6 +26,8 @@ RESTfulAPI_sanic
 
 ```
 
+---
+
 ## How to start this project
 
 ```sh
@@ -35,6 +37,8 @@ RESTfulAPI_sanic
 ```
 
 localhost:8081 に立てた PostgresSQL Server に接続するように指定している.
+
+---
 
 ## API output
 
