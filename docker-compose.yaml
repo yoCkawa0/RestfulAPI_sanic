@@ -1,0 +1,31 @@
+version: "3"
+# services:
+#   api:
+#     build: .
+
+services:
+  api:
+    build: .
+    volumes:
+      - ".:/api"
+    ports:
+      - "5555:8000"
+    tty: true
+    depends_on:
+      - db
+    # command: python3 ./api_sanic/main.py
+    command: bash -c "python3 ./restfulapi_sanic/migrate.py && python3 ./restfulapi_sanic/main.py"
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 8081:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

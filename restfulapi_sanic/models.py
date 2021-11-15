@@ -3,7 +3,7 @@ from peewee import *
 import datetime
 
 
-test_db = PostgresqlDatabase('postgres', host='localhost', port=8081, user='postgres', password='example')
+test_db = PostgresqlDatabase('postgres', host='db', port=5432, user='postgres', password='example')
 
 
 class BaseModel(Model):
